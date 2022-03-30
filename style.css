@@ -1,0 +1,311 @@
+body {
+    overflow-x: hidden;
+    background-color: #202060;
+    color: white;
+}
+ 
+.tech_card {
+    padding: 30px;
+}
+
+.tech_card_text {
+    position: absolute;
+    bottom: 20px;
+    width: 80%;
+}
+
+.flipster {
+    display: block;
+    position: relative;
+    margin-top: 50px;
+}
+
+.flipster:focus {
+    outline: none;
+}
+
+.flipster__container,
+.flipster__item {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+}
+
+.flipster__container {
+    display: block;
+    white-space: nowrap;
+    word-spacing: -0.25em;
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+.flipster__item {
+    display: inline-block;
+    white-space: normal;
+    word-spacing: normal;
+    vertical-align: bottom;
+}
+
+.cm .flipster__item__content {
+    border: 3px solid #1F75FE;
+}
+
+.dm .flipster__item__content {
+    border: 3px solid #B030B0;
+}
+
+.flipster--click .flipster__item--past,
+.flipster--click .flipster__item--future {
+    cursor: pointer;
+}
+  
+.flipster--infinite-carousel .flipster__container, .flipster--infinite-carousel .flipster__item {
+        transition: all 650ms ease-in-out;
+        transition-timing-function: cubic-bezier(.56,.12,.12,.98);
+}
+  
+.flipster--infinite-carousel .flipster__item__content { 
+    transition: inherit; 
+    border-radius: 10px;
+}
+  
+.flipster--infinite-carousel .flipster__item {
+    position: absolute;
+    perspective: 800px;
+}
+
+.flipster--infinite-carousel .flipster__item--past-6,
+.flipster--infinite-carousel .flipster__item--future-6 {
+    transition-delay: 200ms;
+    opacity: 0;
+}
+
+.flipster--infinite-carousel .flipster__item--past-5,
+.flipster--infinite-carousel .flipster__item--future-5 {
+    transition-delay: 180ms;
+    opacity: 0.2;
+}
+
+.flipster--infinite-carousel .flipster__item--past-4,
+.flipster--infinite-carousel .flipster__item--future-4 {
+    transition-delay: 150ms;
+    opacity: 0.2;
+}
+
+.flipster--infinite-carousel .flipster__item--past-3,
+.flipster--infinite-carousel .flipster__item--future-3 {
+    transition-delay: 120ms;
+    opacity: 0.4;
+}
+  
+.flipster--infinite-carousel .flipster__item--past-2,
+.flipster--infinite-carousel .flipster__item--future-2 {
+    transition-delay: 90ms;
+    opacity: 0.6;
+}
+  
+.flipster--infinite-carousel .flipster__item--past-1,
+.flipster--infinite-carousel .flipster__item--future-1 {
+    transition-delay: 60ms;
+    opacity: 0.8;
+}
+
+.flipster--infinite-carousel .flipster__item--current {
+    transition-delay: 0;
+}
+
+.flipster--infinite-carousel .flipster__item--past-5 .flipster__item__content { 
+    transform: translateX(-85%) rotateY(45deg) scale(0.8); 
+    background-color: #4D4D80;
+}
+.flipster--infinite-carousel .flipster__item--future-5 .flipster__item__content { 
+    transform: translateX(85%) rotateY(-45deg) scale(0.8); 
+    background-color: #4D4D80;
+}
+
+.flipster--infinite-carousel .flipster__item--past-4 .flipster__item__content { 
+    transform: translateX(-70%) rotateY(45deg) scale(0.8); 
+    background-color: #4D4D80;
+}
+.flipster--infinite-carousel .flipster__item--future-4 .flipster__item__content { 
+    transform: translateX(70%) rotateY(-45deg) scale(0.8); 
+    background-color: #4D4D80;
+}
+  
+.flipster--infinite-carousel .flipster__item--past-3 .flipster__item__content { 
+    transform: translateX(-55%) rotateY(45deg) scale(0.8); 
+    background-color: #4D4D80;
+}
+.flipster--infinite-carousel .flipster__item--future-3 .flipster__item__content { 
+    transform: translateX(55%) rotateY(-45deg) scale(0.8); 
+    background-color: #4D4D80;
+}
+
+.flipster--infinite-carousel .flipster__item--past-2 .flipster__item__content { 
+    transform: translateX(-40%) rotateY(45deg) scale(0.8); 
+    background-color: #4D4D80;
+}
+.flipster--infinite-carousel .flipster__item--future-2 .flipster__item__content { 
+    transform: translateX(40%) rotateY(-45deg) scale(0.8);
+    background-color: #4D4D80; 
+}
+  
+.flipster--infinite-carousel .flipster__item--past-1 .flipster__item__content { 
+    transform: translateX(-25%) rotateY(45deg) scale(0.8); 
+    background-color: #4D4D80;
+}
+.flipster--infinite-carousel .flipster__item--future-1 .flipster__item__content { 
+    transform: translateX(25%) rotateY(-45deg) scale(0.8); 
+    background-color: #4D4D80;
+}
+  
+.flipster--infinite-carousel .flipster__item--current .flipster__item__content { 
+    transform: translateX(0) rotateY(0deg) scale(1);
+    background-color: #7979A0;
+}
+
+
+  
+/* @group Flipster Previous & Next Buttons */
+.flipster__button {
+    position: absolute;
+    display: block;
+    color: white;
+    transform: translate(0,-50%); 
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background: none;
+    border: none;
+    padding: 0;
+    z-index: 999;
+    cursor: pointer;
+    font-size: 15px;
+    opacity: 0.5;
+    -webkit-transition: opacity 500ms ease;
+    -o-transition: opacity 500ms ease;
+    transition: opacity 500ms ease;
+    margin: -1em 2em;
+}
+
+.flipster__button svg {
+    width: 2em;
+    stroke: currentColor;
+    fill: transparent;
+    stroke-width: 3;
+}
+
+.flipster__button:hover {
+    opacity: 1;
+}
+
+.carousel_indicators {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    margin-top: 50px;
+}
+
+.carousel_indicators circle {
+    stroke:#FFFFFF;
+}
+
+.carousel_indicators circle:hover {
+    fill:#B030B0;
+    cursor: pointer;
+}
+
+.circle_fill {
+    fill:#B030B0;
+}
+
+.circle_nofill {
+    fill: none;
+}
+
+@media only screen and (max-width: 600px){
+    .flipster--infinite-carousel .flipster__item__content {
+        width: 343px;
+        height: 343px;
+    }
+
+    .flipster--infinite-carousel .flipster__item--past {
+        opacity: 0;
+    }
+
+    .flipster--infinite-carousel .flipster__item--future {
+        opacity: 0;
+    }
+
+    .flipster__button {
+        font-size: 10px;
+        top: 100%;
+    }
+
+    .carousel_indicators {
+        width: 280px;
+    }
+
+    .flipster__button--prev {
+        left: 0;
+    }
+    .flipster__button--next {
+        right: 0;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .flipster--infinite-carousel .flipster__item__content {
+        width: 343px;
+        height: 343px;
+    }
+
+    .flipster__button {
+        font-size: 10px;
+        top: 100%;
+    }
+
+    .flipster__button--prev {
+        left: 15%;
+    }
+    .flipster__button--next {
+        right: 15%;
+    }
+
+    .carousel_indicators {
+        width: 280px;
+    }
+}
+
+@media only screen and (min-width: 905px) {
+    .flipster--infinite-carousel .flipster__item__content {
+        width: 444px;
+        height: 444px;
+    }
+
+    .flipster__button {
+        font-size: 15px;
+        top: 50%;
+    }
+
+    .carousel_indicators {
+        width: 324px;
+    }
+
+    .flipster__button--prev {
+        left: 0;
+    }
+    .flipster__button--next {
+        right: 0;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .flipster--infinite-carousel .flipster__item__content {
+        width: 554px;
+        height: 554px;
+    }
+}
