@@ -620,10 +620,11 @@
 
             function circle_fill(current_idx, prev_idx) {
                 if(current_idx!=prev_idx) {
+                    var circle_classes = ["circle_fill_cm", "circle_fill_dm", "circle_fill_ad", "circle_fill_admin"];
                     circles[current_idx].classList.remove("circle_nofill");
-                    circles[current_idx].classList.add("circle_fill");
+                    circles[current_idx].classList.add(circle_classes[Math.floor(current_idx/2)]);
                     circles[prev_idx].classList.add("circle_nofill");
-                    circles[prev_idx].classList.remove("circle_fill");
+                    circles[prev_idx].classList.remove(circle_classes[prev_idx%2]);
                 }
             }
 
@@ -723,7 +724,7 @@ var flipContainer = $('.flipster'),
 flipContainer.flipster({
   itemContainer: flipItemContainer,
   itemSelector: flipItem,
-  loop: 5,
+  loop: 3,
   autoplay: false,
   start: 0,
   style: 'infinite-carousel',
