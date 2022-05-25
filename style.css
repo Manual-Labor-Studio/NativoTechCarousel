@@ -15,6 +15,9 @@ body {
     color: white;
     font-family: 'Albra grotesk regular', sans-serif;
 }
+.labels {
+    display: none;
+}
 .flipster h4 {
     font-family: "Albra grotesk bold";
 }
@@ -282,7 +285,7 @@ body {
 
     .flipster__button {
         font-size: 10px;
-        top: 100%;
+        bottom: 22px;
     }
 
     .carousel_indicators {
@@ -326,7 +329,7 @@ body {
 
     .flipster__button {
         font-size: 10px;
-        top: 100%;
+        bottom: 22px;
     }
 
     .flipster__button--prev {
@@ -342,6 +345,10 @@ body {
 }
 
 @media only screen and (min-width: 905px) {
+    .labels {
+        display: block;
+    }
+    
     .tech_card {
         margin: 30px;
     }
